@@ -1,0 +1,10 @@
+[
+  {
+    "link": "https://discourse.example.com/t/example1",
+    "content": "This post explains PCA and its application in data science."
+  },
+  {
+    "link": "https://discourse.example.com/t/example2",
+    "content": "Linear regression is a supervised learning method..."
+  }
+]
