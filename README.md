@@ -1,4 +1,4 @@
-# Project_1_TDS# Virtual Teaching Assistant – TDS Jan 2025
+# Project_1_TDS Jan 2025
 
 An API that answers student queries about the "Tools in Data Science" course using OpenAI and embeddings-based search on course + Discourse content.
 
