@@ -12,8 +12,12 @@ import os
 app = FastAPI()
 
 # Load embedded data from JSON
-with open("data/embedded.json", "r") as f:
-    embedded_data = json.load(f)
+embedded_data = []
+try:
+    with open("data/embedded.json", "r") as f:
+        embedded_data = json.load(f)
+except FileNotFoundError:
+    print("⚠️ data/embedded.json not found. Make sure to upload it before deployment.")
 
 class QuestionRequest(BaseModel):
     question: str
