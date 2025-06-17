@@ -7,8 +7,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 import base64
 from io import BytesIO
 from PIL import Image
-import os
 from openai import OpenAI
+import os
 from dotenv import load_dotenv
 
 # Load environment variables (for OPENAI_API_KEY)
@@ -25,7 +25,10 @@ embedded_texts = [item["text"] for item in embedded_data]
 embedded_vectors = np.array([item["embedding"] for item in embedded_data])
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = OpenAI(
+    api_key=os.getenv("AIPROXY_TOKEN"),
+    base_url="https://aiproxy.sanand.workers.dev/openai/v1"
+)
 
 # Request schema
 class QuestionRequest(BaseModel):
